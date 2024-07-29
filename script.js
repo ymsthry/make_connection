@@ -4,7 +4,7 @@ async function getChatGPTResponse() {
     const style = document.getElementById('style').value;
 
     // 正しい形式でAPIキーを設定
-    const apiKey = 'sk-None-2PJlq4okAaElfmL1Wx0NT3BlbkFJeNWfZtXaDyUx2dWXzyWK'; // 実際のAPIキーに置き換えてください
+    const apiKey = 'sk-proj-ZkXlj374KASMZMmIkJ3LT3BlbkFJCeAgDw867WP2zvI0fHmn'; // 実際のAPIキーに置き換えてください
 
     // スタイルに応じたプロンプトを設定
     let prompt;
