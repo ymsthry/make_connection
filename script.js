@@ -4,7 +4,7 @@ async function getChatGPTResponse() {
     const style = document.getElementById('style').value;
 
     // 正しい形式でAPIキーを設定
-    const apiKey = 'sk-None-2PJlq4okAaElfmL1Wx0NT3BlbkFJeNWfZtXaDyUx2dWXzyWK';
+    const apiKey = 'sk-None-2PJlq4okAaElfmL1Wx0NT3BlbkFJeNWfZtXaDyUx2dWXzyWK'; // 実際のAPIキーに置き換えてください
 
     // スタイルに応じたプロンプトを設定
     let prompt;
@@ -14,6 +14,9 @@ async function getChatGPTResponse() {
         prompt = `将来を心配する親のように厳しく、次の内容について返答してください: ${userInput}`;
     } else if (style === 'teacher') {
         prompt = `先生のように中立的な立場で、次の内容について返答してください: ${userInput}`;
+    } else {
+        responseDiv.innerText = 'Error: Invalid style selected.';
+        return;
     }
 
     try {
