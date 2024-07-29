@@ -3,8 +3,8 @@ async function getChatGPTResponse() {
     const responseDiv = document.getElementById('response');
     const style = document.getElementById('style').value;
 
-    // ここに取得したOpenAI APIキーを貼り付けます
-    const apiKey = 'sk-proj-FhFUhytdbfvLb4XxqrRST3BlbkFJZwYROlCIlVhTk4C2ahIK' ;
+    // 正しい形式でAPIキーを設定
+    const apiKey = 'sk-proj-FhFUhytdbfvLb4XxqrRST3BlbkFJZwYROlCIlVhTk4C2ahIK';
 
     // スタイルに応じたプロンプトを設定
     let prompt;
@@ -30,9 +30,14 @@ async function getChatGPTResponse() {
             })
         });
 
+        if (!response.ok) {
+            throw new Error(`HTTP error! Status: ${response.status}`);
+        }
+
         const data = await response.json();
         responseDiv.innerText = data.choices[0].text;
     } catch (error) {
+        console.error('Error:', error);
         responseDiv.innerText = 'Error: ' + error.message;
     }
 }
