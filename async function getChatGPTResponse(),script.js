@@ -3,7 +3,7 @@ async function getChatGPTResponse() {
     const responseDiv = document.getElementById('response');
 
     // OpenAI APIキーを設定（これを本番環境では公開しないように注意）
-    const apiKey = 'YOUR_OPENAI_API_KEY';
+    const apiKey = sk-proj-FhFUhytdbfvLb4XxqrRST3BlbkFJZwYROlCIlVhTk4C2ahIK;
 
     try {
         const response = await fetch('https://api.openai.com/v1/engines/davinci-codex/completions', {
