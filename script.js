@@ -4,7 +4,7 @@ async function getChatGPTResponse() {
     const style = document.getElementById('style').value;
 
     // ここに取得したOpenAI APIキーを貼り付けます
-    const apiKey = sk-proj-FhFUhytdbfvLb4XxqrRST3BlbkFJZwYROlCIlVhTk4C2ahIK ;
+    const apiKey = 'sk-proj-FhFUhytdbfvLb4XxqrRST3BlbkFJZwYROlCIlVhTk4C2ahIK' ;
 
     // スタイルに応じたプロンプトを設定
     let prompt;
